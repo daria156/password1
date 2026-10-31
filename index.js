@@ -3,3 +3,21 @@ const uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', '
 const numbers   = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 const symbols   = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '-'];
 
+const passwordLength = Number(prompt("Введите длину пароля:"));
+const useNumbers = confirm("Добавить цифры в пароль?");
+const useSymbols = confirm("Добавить специальные символы в пароль?");
+
+const allowedSymbols = [];
+
+allowedSymbols.push(...lowercase);
+allowedSymbols.push(...uppercase);
+
+if (useNumbers) {
+    allowedSymbols.push(...numbers);
+}
+
+if (useSymbols) {
+    allowedSymbols.push(...symbols);
+}
+
+

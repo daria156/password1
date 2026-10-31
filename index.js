@@ -20,4 +20,10 @@ if (useSymbols) {
     allowedSymbols.push(...symbols);
 }
 
+let password = "";
+
+for (let i = 0; i < passwordLength; i++) {
+    const randomIndex = Math.floor(Math.random() * allowedSymbols.length);
+    password += allowedSymbols[randomIndex];
+}
 
